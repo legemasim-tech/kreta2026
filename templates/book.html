@@ -1,39 +1,29 @@
 <!DOCTYPE html>
-
 <html lang="de">
-
 <head>
-
-<meta charset="UTF-8">
-
-<link rel="stylesheet" href="../styles/style.css">
-
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../styles/style.css">
 </head>
-
 <body>
 
-<div class="cover">
+<section class="cover">
+  <img class="cover-image" src="../{{ images.cover }}">
+  <div class="cover-text">
+    <h1>{{ book.title }}</h1>
+    <h2>{{ book.subtitle }}</h2>
+    <p>{{ book.location }}</p>
+    <p>{{ book.people }}</p>
+    <p>{{ book.dates }}</p>
+  </div>
+</section>
 
-<img src="../images/villa.jpg">
-
-<h1>KRETA 2026</h1>
-
-<h2>Unser Reisebuch</h2>
-
-<p>Petra • Thomas • Gerti • Markus</p>
-
-<p>Yvonne • Florian • Leo</p>
-
-</div>
-
-<div class="page">
-
-<h1>{{ title }}</h1>
-
-{{ text|safe }}
-
-</div>
+<section class="page">
+  <h1>{{ title }}</h1>
+  <img class="wide-image" src="../{{ images.welcome }}">
+  <div class="content">
+    {{ text|safe }}
+  </div>
+</section>
 
 </body>
-
 </html>
