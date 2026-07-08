@@ -1,6 +1,6 @@
 TITLE = "Willkommen auf Kreta"
 
-IMAGE = "Villa Perikles (26).avif"
+IMAGE = "Kreta_Westkueste_02_Sfinari_Bucht_Kissamos.jpg"
 
 TEXT = """
 <h2>Ein Zuhause zwischen Meer und Bergen</h2>
@@ -27,21 +27,6 @@ und nach jedem Ausflug gerne zurückkehren.</p>
 sondern ein persönlicher Begleiter – mit Ausflugsideen, Geschichten,
 Hintergrundwissen und vielen kleinen Tipps, die den Urlaub entspannter machen sollen.</p>
 
-<div class="greek">
-<h2>Griechisch des Tages</h2>
-<p><strong>Καλώς ήρθατε</strong><br>
-<em>Kalós írthate</em><br>
-Herzlich willkommen!</p>
-</div>
-
-<h2>Eure Reise auf einen Blick</h2>
-<ul>
-<li><strong>Reisezeit:</strong> 08.–22. August 2026</li>
-<li><strong>12 volle Urlaubstage</strong></li>
-<li><strong>Zuhause:</strong> Villa Pericles in Sfinari</li>
-<li><strong>Mietwagen:</strong> VW Tiguan oder ähnlich</li>
-</ul>
-
 <h2>Ein kleiner Rat für den ersten Abend</h2>
 
 <p>Euer Vermieter begrüßt euch mit einem kleinen Willkommenskorb mit traditionellen kretischen Produkten.
@@ -51,6 +36,22 @@ Den ersten Großeinkauf erledigt ihr später ganz entspannt in Kissamos.</p>
 <p>Für heute gibt es nur einen Plan: ankommen, auspacken, ans Meer gehen
 und den ersten Sonnenuntergang genießen.</p>
 
-<blockquote>Manchmal beginnt der Urlaub nicht mit einer Sehenswürdigkeit,
-sondern mit dem ersten Blick auf das Meer.</blockquote>
+<div class="greek">
+
+<h2>Griechisch des Tages</h2>
+
+<p>
+<strong>Καλώς ήρθατε</strong><br>
+<em>Kalós írthate</em><br>
+Herzlich willkommen!
+</p>
+
+</div>
+
+<blockquote>
+
+„Manchmal beginnt der Urlaub nicht mit einer Sehenswürdigkeit,
+sondern mit dem ersten Blick auf das Meer.“
+
+</blockquote>
 """

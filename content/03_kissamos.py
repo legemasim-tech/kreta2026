@@ -1,65 +1,129 @@
-TITLE = "Kissamos – Einkaufen, Bummeln und Ankommen"
+TITLE = "Kissamos – Das Tor zum Westen Kretas"
 
 IMAGE = "Kissamos_Kreta_Griechenland.webp"
 
+IMAGE_STYLE = "cover"
+
+PHOTO_STYLE = "vertical"
+
+TOP_IMAGES = []
+
+BOTTOM_IMAGES = [
+    {
+        "file": "Mavro Molos Kissamos.jpg",
+        "caption": "Der Strand von Mavros Molos"
+    },
+    {
+        "file": "The cellar Kissamos.png",
+        "caption": "Westkreta: Meer, Einkaufen und Entspannen"
+    }
+]
+
+QUOTE_AFTER_IMAGES = True
+
 TEXT = """
-<h2>Die praktische Stadt in eurer Nähe</h2>
+<h2>Die wichtigste Stadt eurer Reise</h2>
 
-<p>Kissamos ist nicht die spektakulärste Stadt Westkretas – aber wahrscheinlich eine der nützlichsten für euren Urlaub.
-Von Sfinari aus erreicht ihr sie in etwa 25 bis 30 Minuten. Hier erledigt ihr größere Einkäufe, holt Bargeld,
-tankst das Auto auf, geht kurz bummeln oder verbindet den Besuch mit einem Essen am Meer.</p>
+<p>Kissamos ist keine klassische Sehenswürdigkeit, sondern die kleine Stadt,
+die ihr während eures Urlaubs vermutlich am häufigsten besuchen werdet.
+Hier erledigt ihr eure Einkäufe, startet zu einigen Ausflügen und findet
+zahlreiche Tavernen, Cafés und den Hafen.</p>
 
-<p>Die Stadt wirkt eher alltagstauglich als touristisch. Genau das macht sie angenehm:
-kein großer Trubel, keine überfüllte Altstadt, sondern Supermärkte, Cafés, Tavernen und ein entspannter Blick auf die Bucht.</p>
+<p>Im Vergleich zu Chania geht es hier deutlich ruhiger zu. Gerade deshalb
+lohnt es sich, nicht nur zum Einkaufen hierherzukommen, sondern auch einmal
+durch die Straßen zu bummeln oder am Strand von Mavros Molos einen Kaffee
+zu genießen.</p>
 
 <div class="info">
+
 <h2>Praktische Infos</h2>
+
 <ul>
-<li><strong>Fahrzeit ab Sfinari:</strong> ca. 25–30 Minuten</li>
-<li><strong>Zeitbedarf:</strong> 1–3 Stunden, je nachdem ob ihr nur einkauft oder auch essen geht</li>
-<li><strong>Parken:</strong> am einfachsten beim Supermarkt oder nahe der Uferpromenade/Mavros Molos</li>
-<li><strong>Gut kombinierbar mit:</strong> Falassarna, Polyrrinia, Balos-Boot ab Kissamos-Hafen</li>
+
+<li><strong>Fahrzeit ab Villa Pericles:</strong> ca. 20 Minuten bis Kissamos</li>
+
+<li><strong>SYN.KA Supermarkt:</strong> ca. 30 Minuten Fahrzeit, große Auswahl an Lebensmitteln und regionalen Produkten.</li>
+
+<li><strong>Lidl Kissamos:</strong> ca. 55 Minuten Fahrzeit, ideal für den ersten Großeinkauf.</li>
+
+<li><strong>Tankstellen:</strong> mehrere an der Ortseinfahrt.</li>
+
+<li><strong>Apotheken:</strong> mehrere im Stadtzentrum.</li>
+
+<li><strong>Bankomat:</strong> mehrfach im Zentrum vorhanden.</li>
+
 </ul>
+
 </div>
 
-<h2>Einkaufen in Kissamos</h2>
-
-<p>Für größere Einkäufe sind vor allem zwei Märkte wichtig:</p>
+<h2>Was ihr hier erledigen könnt</h2>
 
 <ul>
-<li><strong>Lidl Kissamos:</strong> praktisch für Wasser, Getränke, Snacks, Grillgut und Haushaltsartikel.</li>
-<li><strong>SYN.KA Kissamos:</strong> der griechische Supermarkt mit regionaleren Produkten wie Olivenöl, Honig, Kräutern, Wein und kretischen Spezialitäten.</li>
+
+<li>Großeinkauf für die Villa.</li>
+
+<li>Getränke, Grillgut und Vorräte besorgen.</li>
+
+<li>Frischen Fisch oder regionale Spezialitäten einkaufen.</li>
+
+<li>Am Hafen oder am Strand von Mavros Molos spazieren gehen.</li>
+
+<li>Gemütlich einen Kaffee trinken oder ein Eis genießen.</li>
+
 </ul>
 
-<p>Wenn ihr nur schnell etwas braucht, reicht in Sfinari meist der Mini Market.
-Für den großen Einkauf lohnt sich Kissamos – am besten gleich vormittags oder auf dem Rückweg von einem Ausflug.</p>
-
-<h2>Kleiner Stadtbesuch</h2>
-
-<p>Wenn ihr etwas Zeit habt, lohnt sich ein kurzer Spaziergang Richtung Meer.
-Besonders angenehm ist der Bereich um Mavros Molos: ein breiter Strand, einfache Tavernen,
-Cafés und ein ruhiger Blick über die Bucht von Kissamos.</p>
-
-<h2>Tavernen & Essen</h2>
+<h2>Restaurant-Empfehlungen</h2>
 
 <ul>
-<li><strong>Maria Beach Restaurant:</strong> direkt am Meer bei Mavros Molos, gut für einen entspannten Mittag oder frühen Abend.</li>
-<li><strong>The Cellar:</strong> bekanntes Restaurant am Wasser, gut wenn ihr nach dem Einkaufen noch gemeinsam essen möchtet.</li>
-<li><strong>Limani Fish Tavern:</strong> am Hafen, besonders passend, wenn ihr ohnehin wegen eines Bootsausflugs dort seid.</li>
+
+<li><strong>The Cellar</strong><br>
+Direkt an der Uferpromenade von Kissamos.<br>
+Gemütliche Atmosphäre mit schöner Terrasse und Blick aufs Meer.
+Bekannt für traditionelle kretische Küche, frischen Fisch und
+hervorragende Fleischgerichte.</li>
+
+<li><strong>Pixida Restaurant</strong><br>
+Nahe dem Hafen von Kissamos.<br>
+Eine der besten Adressen für Fisch und Meeresfrüchte.
+Modernes Ambiente mit mediterraner Küche und freundlichem Service.</li>
+
+<li><strong>Maria Beach Restaurant</strong><br>
+Direkt am Strand von Mavros Molos.<br>
+Ideal für ein entspanntes Mittag- oder Abendessen mit Blick aufs Meer.
+Besonders beliebt sind Fischgerichte, Salate und kretische Spezialitäten.</li>
+
 </ul>
 
 <div class="tip">
-<h2>Leos Tipp</h2>
-<p>Kissamos ist kein Tagesausflug, sondern ein guter Zwischenstopp.
-Am besten verbindet ihr Einkaufen, Tanken und ein Essen am Meer – dann fühlt sich selbst ein praktischer Besorgungstag nach Urlaub an.</p>
+
+<h2>Tipp</h2>
+
+<p>Verbindet den Einkauf gleich mit einem Spaziergang am Strand von
+Mavros Molos oder einem Essen am Meer. So wird aus einer
+Besorgungsfahrt ein kleiner Urlaubsausflug.</p>
+
 </div>
 
 <div class="greek">
-<h2>Griechisch</h2>
-<p><strong>Αγορά</strong><br>
+
+<h2>Griechisch des Tages</h2>
+
+<p>
+
+<strong>Αγορά</strong><br>
+
 <em>Agorá</em><br>
-Markt / Einkauf</p>
+
+Markt
+
+</p>
+
 </div>
 
-<blockquote>Kissamos ist nicht der Ort für große Aha-Momente – aber genau der richtige Ort, um euren Urlaub entspannt zu organisieren.</blockquote>
+<blockquote>
+
+„Manche Orte besucht man nicht wegen einer Sehenswürdigkeit,
+sondern weil sie zum Alltag des Urlaubs gehören.“
+
+</blockquote>
 """

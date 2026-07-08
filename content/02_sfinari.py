@@ -1,50 +1,153 @@
 TITLE = "Unser Zuhause in Sfinari"
 
-IMAGE = "Kreta_Westkueste_02_Sfinari_Bucht_Kissamos.jpg"
+IMAGE = None
+
+PHOTO_STYLE = "double"
+
+TOP_IMAGES = [
+    {
+        "file": "Villa Perikles (26).avif",
+        "caption": "Die Villa Pericles direkt am Meer"
+    },
+    {
+        "file": "Villa Perikles (5).avif",
+        "caption": "Blick von der oberen Terrasse aufs Meer"
+    }
+]
+
+BOTTOM_IMAGES = [
+    {
+        "file": "Villa Perikles (4).avif",
+        "caption": "Blick aufs Meer"
+    },
+    {
+        "file": "Villa Perikles (6).webp",
+        "caption": "Pool und Garten der Villa"
+    }
+]
+
+QUOTE_AFTER_IMAGES = True
 
 TEXT = """
-<h2>Die Villa als Mittelpunkt des Urlaubs</h2>
+<h2>Hier beginnt jeder Urlaubstag</h2>
 
-<p>Die Villa Pericles ist nicht nur der Ort, an dem ihr übernachtet.
-Sie ist der Mittelpunkt eurer Reise. Direkt am Meer gelegen, mit Terrasse,
-Pool, Garten und Grillplatz, bietet sie genau das, was diesen Urlaub besonders macht:
-Ruhe, Weite und Zeit miteinander.</p>
+<p>Es gibt Unterkünfte, in denen man nur schläft. Und es gibt Orte,
+an denen man ankommt und sich sofort zuhause fühlt.
+Die Villa Pericles gehört eindeutig zur zweiten Kategorie.</p>
 
-<p>Viele Ausflüge in Westkreta sind wunderschön. Aber ihr habt das Glück,
-dass einer der schönsten Orte bereits direkt vor eurer Tür liegt.
-Deshalb sollte es im Urlaub bewusst Tage geben, an denen das Auto stehen bleibt.</p>
+<p>Nur wenige Schritte trennen euch vom Meer. Morgens wacht ihr mit dem
+Rauschen der Wellen auf, frühstückt auf der Terrasse und blickt hinaus auf
+das Libysche Meer. Abends erlebt ihr von hier aus einige der schönsten
+Sonnenuntergänge Westkretas.</p>
+
+<p>Gerade deshalb lohnt es sich, nicht jeden Tag einen großen Ausflug zu
+unternehmen. Manche der schönsten Urlaubsmomente entstehen genau hier:
+am Pool, auf der Terrasse oder bei einem Glas Wein mit Blick aufs Meer.</p>
+
+<h2>Die Villa Pericles</h2>
+
+<ul>
+<li>Direkte Strandlage (ca. 10 Meter zum Meer)</li>
+<li>Privater Pool (9 × 5 Meter)</li>
+<li>Große Terrasse mit Meerblick</li>
+<li>Grillplatz für gemeinsame Abende</li>
+<li>Jacuzzi im Hauptschlafzimmer</li>
+<li>Volleyballnetz im Garten</li>
+<li>Kostenloses WLAN und Klimaanlage</li>
+<li>Privater Parkplatz direkt am Haus</li>
+</ul>
+
+<p>Das Haus wurde von Pericles, einem bekannten kretischen Musiker und
+Geigenspieler, liebevoll renoviert. Viele seiner musikalischen Ideen sollen
+genau hier – mit Blick aufs Meer – entstanden sein.</p>
+
+<div class="info">
+
+<h2>Praktische Infos</h2>
+
+<ul>
+
+<li><strong>Strand:</strong> direkt vor der Villa</li>
+
+<li><strong>Mini Market:</strong> ca. 12 Minuten zu Fuß</li>
+
+<li><strong>Tavernen:</strong> ca. 12 Minuten zu Fuß nach Sfinari</li>
+
+<li><strong>Große Einkäufe:</strong> Lidl oder SYN.KA in Kissamos</li>
+
+<li><strong>Parken:</strong> kostenlos an der Villa</li>
+
+</ul>
+
+</div>
+
+<h2>Was ihr hier unbedingt machen solltet</h2>
+
+<ul>
+
+<li>Den ersten Sonnenuntergang auf der Terrasse genießen.</li>
+
+<li>Vor dem Frühstück kurz ins Meer springen.</li>
+
+<li>Einen gemeinsamen Grillabend veranstalten.</li>
+
+<li>Schnorcheln direkt vor der Villa.</li>
+
+<li>Einen ganzen Tag bewusst nichts unternehmen.</li>
+
+</ul>
 
 <h2>Sfinari</h2>
 
-<p>Sfinari ist ein ruhiges Fischerdorf an der Westküste Kretas.
-Hier geht es nicht um große Hotelanlagen oder laute Strandpromenaden,
-sondern um Meer, Tavernen, Felsen, Sonnenuntergänge und das Gefühl,
-ein Stück ursprüngliches Kreta kennenzulernen.</p>
+<p>Das kleine Fischerdorf gehört zu den ruhigsten Orten an der Westküste
+Kretas. Große Hotels sucht ihr hier vergeblich. Stattdessen erwarten euch
+freundliche Tavernen, ein kleiner Mini Market und eine entspannte Atmosphäre,
+wie man sie auf Kreta nur noch selten findet.</p>
 
-<div class="info">
-<h2>Praktische Infos</h2>
+<h2>Unsere Tavernen-Empfehlungen</h2>
+
 <ul>
-<li><strong>Mini Market Sfinari:</strong> für Brot, Getränke und Kleinigkeiten</li>
-<li><strong>Öffnungszeit:</strong> bis ca. 20:00 Uhr</li>
-<li><strong>Größere Einkäufe:</strong> Lidl Kissamos oder SYN.KA Kissamos</li>
-<li><strong>Parken:</strong> direkt an der Villa bzw. bei den Tavernen am Strand</li>
-<li><strong>Ideal für:</strong> Ruhetage, Grillabende, Sonnenuntergänge, Schnorcheln</li>
+
+<li><strong>Captain Fidias</strong><br>
+Direkt an der Bucht von Sfinari, etwa 12 Minuten zu Fuß von der Villa entfernt.<br>
+Frischer Fisch, Meeresfrüchte und traditionelle kretische Küche mit herrlichem Blick aufs Meer.</li>
+
+<li><strong>Antonios</strong><br>
+Im Ortszentrum von Sfinari, ebenfalls etwa 12 Minuten zu Fuß von der Villa entfernt.<br>
+Familiäre Atmosphäre, kretische Küche und regionale Spezialitäten.</li>
+
 </ul>
+
+<div class="tip">
+
+<h2>Tipp</h2>
+
+<p>Plant bewusst mindestens einen kompletten „Villa-Tag“ ein.
+Nicht weil euch die Ausflugsziele ausgehen, sondern weil dieser Ort
+selbst zu den schönsten Erinnerungen eurer Reise gehören wird.</p>
+
 </div>
-
-<h2>Der perfekte Tag ohne Ausflug</h2>
-
-<p>Frühstück auf der Terrasse. Danach ein Sprung in den Pool.
-Mittags etwas Leichtes essen, lesen, rätseln oder einfach aufs Meer schauen.
-Am Nachmittag schnorcheln oder am Strand spazieren.
-Und abends: Grillen, Wein, Ouzo und Sonnenuntergang.</p>
-
-<blockquote>Manchmal ist der schönste Urlaubstag der, an dem man nirgendwohin fährt.</blockquote>
 
 <div class="greek">
-<h2>Griechisch</h2>
-<p><strong>Θάλασσα</strong><br>
+
+<h2>Griechisch des Tages</h2>
+
+<p>
+
+<strong>Θάλασσα</strong><br>
+
 <em>Thálassa</em><br>
-Meer</p>
+
+Meer
+
+</p>
+
 </div>
+
+<blockquote>
+
+„Manchmal muss man gar nicht weit fahren,
+um den schönsten Platz des Urlaubs zu finden.“
+
+</blockquote>
 """

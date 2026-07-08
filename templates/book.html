@@ -3,48 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-
     <style>
         {{ css|safe }}
     </style>
-
 </head>
 
 <body>
 
-<!-- =========================
-     TITELSEITE
-========================= -->
-
 <section class="cover">
-
     <img class="cover-image" src="{{ cover_image }}">
 
     <div class="cover-text">
-
         <h1>{{ book.title }}</h1>
-
         <h2>{{ book.subtitle }}</h2>
-
-        <p class="subtitle">
-            {{ book.location }}
-        </p>
-
-        <p class="persons">
-            {{ book.people }}
-        </p>
-
-        <p class="dates">
-            {{ book.dates }}
-        </p>
-
+        <p class="subtitle">{{ book.location }}</p>
+        <p class="persons">{{ book.people }}</p>
+        <p class="dates">{{ book.dates }}</p>
     </div>
-
 </section>
-
-<!-- =========================
-     BUCHSEITEN
-========================= -->
 
 {% for page in pages %}
 
@@ -53,19 +29,61 @@
     <h1>{{ page.title }}</h1>
 
     {% if page.image %}
-    <img class="wide-image" src="{{ page.image }}">
+    <img class="wide-image {{ page.image_style }}" src="{{ page.image }}">
+    {% endif %}
+
+    {% if page.top_images %}
+    <div class="photo-gallery gallery-count-{{ page.top_images|length }} {{ page.photo_style }}">
+        {% for image in page.top_images %}
+        <figure class="photo-box">
+            <img class="{{ image.style|default('cover') }}" src="{{ image.src }}">
+            {% if image.caption %}
+            <figcaption>{{ image.caption }}</figcaption>
+            {% endif %}
+        </figure>
+        {% endfor %}
+    </div>
     {% endif %}
 
     <div class="content">
-
         {{ page.text|safe }}
-
     </div>
+
+    {% if page.bottom_images %}
+    <div class="photo-gallery gallery-count-{{ page.bottom_images|length }} {{ page.photo_style }}">
+        {% for image in page.bottom_images %}
+        <figure class="photo-box">
+            <img class="{{ image.style|default('cover') }}" src="{{ image.src }}">
+            {% if image.caption %}
+            <figcaption>{{ image.caption }}</figcaption>
+            {% endif %}
+        </figure>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if page.extra_images %}
+    <div class="photo-gallery gallery-count-{{ page.extra_images|length }} {{ page.photo_style }}">
+        {% for image in page.extra_images %}
+        <figure class="photo-box">
+            <img class="{{ image.style|default('cover') }}" src="{{ image.src }}">
+            {% if image.caption %}
+            <figcaption>{{ image.caption }}</figcaption>
+            {% endif %}
+        </figure>
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    {% if page.quote %}
+    <div class="content">
+        {{ page.quote|safe }}
+    </div>
+    {% endif %}
 
 </section>
 
 {% endfor %}
 
 </body>
-
 </html>
