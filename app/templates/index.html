@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <meta name="theme-color" content="#355b57">
+
+    <title>{{ book.title }} · {{ book.subtitle }}</title>
+
+    <link rel="stylesheet" href="static/app.css">
+</head>
+
+<body>
+    <header class="home-header">
+        {% if cover_image %}
+            <img
+                class="home-cover"
+                src="{{ cover_image }}"
+                alt="Villa Pericles auf Kreta"
+            >
+        {% endif %}
+
+        <div class="home-header-overlay">
+            <p class="eyebrow">{{ book.subtitle }}</p>
+
+            <h1>{{ book.title }}</h1>
+
+            <p class="home-location">
+                {{ book.location }}
+            </p>
+
+            <p class="home-dates">
+                {{ book.dates }}
+            </p>
+        </div>
+    </header>
+
+    <main class="home-content">
+        <section class="introduction">
+            <h2>Unsere Reise</h2>
+
+            <p>
+                Orte, Strände, Ausflüge, Tavernen und persönliche
+                Erinnerungen für unsere gemeinsame Zeit auf Kreta.
+            </p>
+        </section>
+
+        <section class="chapter-list">
+            {% for page in pages %}
+                <a
+                    class="chapter-card"
+                    href="{{ page.slug }}.html"
+                >
+                    {% if page.image %}
+                        <img
+                            src="{{ page.image }}"
+                            alt="{{ page.title }}"
+                            loading="lazy"
+                        >
+                    {% endif %}
+
+                    <div class="chapter-card-content">
+                        <span class="chapter-number">
+                            Kapitel {{ loop.index }}
+                        </span>
+
+                        <h2>{{ page.title }}</h2>
+
+                        <span class="open-chapter">
+                            Kapitel öffnen →
+                        </span>
+                    </div>
+                </a>
+            {% endfor %}
+        </section>
+    </main>
+
+    <footer class="home-footer">
+        <p>{{ book.people }}</p>
+    </footer>
+</body>
+</html>

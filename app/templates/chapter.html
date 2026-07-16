@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1"
+    >
+
+    <meta name="theme-color" content="#f4f0e8">
+
+    <title>{{ page.title }} · {{ book.title }}</title>
+
+    <link rel="stylesheet" href="static/app.css">
+</head>
+
+<body>
+    <nav class="top-navigation">
+        <a href="index.html">
+            <span aria-hidden="true">←</span>
+            Übersicht
+        </a>
+
+        <span>Kapitel {{ chapter_number }}</span>
+    </nav>
+
+    <main class="chapter">
+        <header class="chapter-header">
+            <p class="chapter-label">
+                Kapitel {{ chapter_number }}
+            </p>
+
+            <h1>{{ page.title }}</h1>
+        </header>
+
+        {% if page.image %}
+            <img
+                class="hero-image {{ page.image_style }}"
+                src="{{ page.image }}"
+                alt="{{ page.title }}"
+            >
+        {% endif %}
+
+        {% if page.top_images %}
+            <div class="photo-layout {{ page.photo_style }}">
+                {% for photo in page.top_images %}
+                    <figure class="photo-frame {{ photo.style }}">
+                        <img
+                            src="{{ photo.src }}"
+                            alt="{{ photo.caption }}"
+                            loading="lazy"
+                        >
+
+                        {% if photo.caption %}
+                            <figcaption>
+                                {{ photo.caption }}
+                            </figcaption>
+                        {% endif %}
+                    </figure>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <article class="chapter-text">
+            {{ page.text | safe }}
+        </article>
+
+        {% if page.bottom_images %}
+            <div class="photo-layout {{ page.photo_style }}">
+                {% for photo in page.bottom_images %}
+                    <figure class="photo-frame {{ photo.style }}">
+                        <img
+                            src="{{ photo.src }}"
+                            alt="{{ photo.caption }}"
+                            loading="lazy"
+                        >
+
+                        {% if photo.caption %}
+                            <figcaption>
+                                {{ photo.caption }}
+                            </figcaption>
+                        {% endif %}
+                    </figure>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if page.extra_images %}
+            <div class="photo-layout {{ page.photo_style }}">
+                {% for photo in page.extra_images %}
+                    <figure class="photo-frame {{ photo.style }}">
+                        <img
+                            src="{{ photo.src }}"
+                            alt="{{ photo.caption }}"
+                            loading="lazy"
+                        >
+
+                        {% if photo.caption %}
+                            <figcaption>
+                                {{ photo.caption }}
+                            </figcaption>
+                        {% endif %}
+                    </figure>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        {% if page.quote %}
+            <div class="chapter-quote">
+                {{ page.quote | safe }}
+            </div>
+        {% endif %}
+    </main>
+
+    <nav class="chapter-navigation">
+        {% if previous_page %}
+            <a
+                class="previous-link"
+                href="{{ previous_page.slug }}.html"
+            >
+                <span>← Vorheriges Kapitel</span>
+                <strong>{{ previous_page.title }}</strong>
+            </a>
+        {% else %}
+            <span></span>
+        {% endif %}
+
+        {% if next_page %}
+            <a
+                class="next-link"
+                href="{{ next_page.slug }}.html"
+            >
+                <span>Nächstes Kapitel →</span>
+                <strong>{{ next_page.title }}</strong>
+            </a>
+        {% endif %}
+    </nav>
+
+    <footer class="chapter-footer">
+        <a href="index.html">Alle Kapitel</a>
+    </footer>
+</body>
+</html>
