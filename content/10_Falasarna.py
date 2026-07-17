@@ -6,7 +6,7 @@ PHOTO_STYLE = "single"
 
 EXTRA_IMAGES = [
     {
-        "file": "falassarna-kreta-griechenland 2.jpg",
+        "file": "falasarna_2.jpg",
         "caption": "Falasarna – weiter Sandstrand, klares Wasser und perfekte Sonnenuntergänge"
     }
 ]
