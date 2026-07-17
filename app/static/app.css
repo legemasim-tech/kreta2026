@@ -336,12 +336,14 @@ blockquote {
     max-height: 600px;
 }
 
-.photo-layout.grid-large .photo-frame:first-child {
-    grid-column: 1 / -1;
+.photo-layout.grid-large {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.photo-layout.grid-large .photo-frame:first-child img {
-    height: 310px;
+.photo-layout.grid-large .photo-frame img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
 }
 
 .photo-layout.grid-small .photo-frame img {
@@ -452,8 +454,8 @@ blockquote {
         height: 165px;
     }
 
-    .photo-layout.grid-large .photo-frame:first-child img {
-        height: 245px;
+    .photo-layout.grid-large .photo-frame img {
+        height: 150px;
     }
 
     .photo-layout.grid-small .photo-frame img {

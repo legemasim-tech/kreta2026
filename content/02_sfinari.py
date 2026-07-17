@@ -1,19 +1,8 @@
 TITLE = "Unser Zuhause in Sfinari"
 
-IMAGE = None
+IMAGE = "Villa Perikles (26).avif"
 
 PHOTO_STYLE = "double"
-
-TOP_IMAGES = [
-    {
-        "file": "Villa Perikles (26).avif",
-        "caption": "Die Villa Pericles direkt am Meer"
-    },
-    {
-        "file": "Villa Perikles (5).avif",
-        "caption": "Blick von der oberen Terrasse aufs Meer"
-    }
-]
 
 BOTTOM_IMAGES = [
     {
