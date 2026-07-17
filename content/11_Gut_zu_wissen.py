@@ -2,16 +2,12 @@ TITLE = "Gut zu wissen – Praktische Tipps für euren Urlaub"
 
 IMAGE = "Villa Perikles (10).avif"
 
-PHOTO_STYLE = "vertical"
+PHOTO_STYLE = "single"
 
 EXTRA_IMAGES = [
     {
-        "file": "Villa Perikles (10).avif",
+        "file": "Villa Perikles (8).avif",
         "caption": "Entspannt einkaufen, grillen und den Tag genießen"
-    },
-    {
-        "file": "Villa Perikles (12).avif",
-        "caption": "Der beste Platz für die Urlaubsplanung: eure Terrasse"
     }
 ]
 

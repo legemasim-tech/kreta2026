@@ -4,6 +4,17 @@ IMAGE = "Kreta_Westkueste_01_Turm_Agios_Dimitrios_Varsamakia_Kissamos.jpg"
 
 IMAGE_STYLE = "contain"
 
+PHOTO_STYLE = "single"
+
+EXTRA_IMAGES = [
+    {
+        "file": "Varsamakia 1.jpg",
+        "caption": "Varsamakia und der Turm des Heiligen Demetrius"
+    }
+]
+
+QUOTE_AFTER_IMAGES = True
+
 TEXT = """
 <h2>Ein kurzer Ausflug mit großer Aussicht</h2>
 

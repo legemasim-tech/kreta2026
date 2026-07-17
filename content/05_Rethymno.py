@@ -1,6 +1,6 @@
 TITLE = "Rethymno – Altstadt, Fortezza und ein kurzer persönlicher Abstecher"
 
-IMAGE = "Kreta_Westkueste_08_Rethymno_Venezianischer_Hafen.jpg"
+IMAGE = "Rethymno_4.jpg"
 
 PHOTO_STYLE = "grid-large"
 
