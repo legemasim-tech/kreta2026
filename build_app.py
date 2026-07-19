@@ -20,6 +20,14 @@ OUTPUT_DIR = BASE_DIR / "output" / "app"
 OUTPUT_IMAGE_DIR = OUTPUT_DIR / "images"
 OUTPUT_STATIC_DIR = OUTPUT_DIR / "static"
 
+SUPPORTED_SLIDESHOW_EXTENSIONS = {
+    ".jpg",
+    ".jpeg",
+    ".png",
+    ".webp",
+    ".avif",
+}
+
 
 def image_path(filename: str | None) -> str | None:
     """
@@ -136,6 +144,34 @@ def load_content_pages() -> list[dict]:
                 "PHOTO_STYLE",
                 "double",
             ),
+            "map_embed_url": getattr(
+                module,
+                "MAP_EMBED_URL",
+                None,
+            ),
+            "map_open_url": getattr(
+                module,
+                "MAP_OPEN_URL",
+                None,
+            ),
+            "spotify_embed_url": getattr(
+                module,
+                "SPOTIFY_EMBED_URL",
+                None,
+            ),
+            "spotify_open_url": getattr(
+                module,
+                "SPOTIFY_OPEN_URL",
+                None,
+            ),
+            "slideshow_images": load_images(
+                getattr(module, "SLIDESHOW_IMAGES", [])
+            ),
+            "slideshow_from_image_folder": getattr(
+                module,
+                "SLIDESHOW_FROM_IMAGE_FOLDER",
+                False,
+            ),
         })
 
     return pages
@@ -166,6 +202,42 @@ def prepare_output() -> None:
         dirs_exist_ok=True,
     )
 
+def collect_slideshow_images_from_folder() -> list[dict]:
+    """
+    Sammelt alle unterstützten Bilder aus dem Ordner images/.
+
+    Auch Bilder in möglichen Unterordnern werden berücksichtigt.
+    Die Sortierung erfolgt alphabetisch nach dem Dateipfad.
+    """
+    slideshow_images = []
+
+    image_files = sorted(
+        (
+            path
+            for path in IMAGE_DIR.rglob("*")
+            if path.is_file()
+            and path.suffix.lower() in SUPPORTED_SLIDESHOW_EXTENSIONS
+        ),
+        key=lambda path: path.relative_to(IMAGE_DIR).as_posix().lower(),
+    )
+
+    for path in image_files:
+        relative_path = path.relative_to(IMAGE_DIR).as_posix()
+
+        caption = (
+            path.stem
+            .replace("_", " ")
+            .replace("-", " ")
+            .strip()
+        )
+
+        slideshow_images.append({
+            "src": image_path(relative_path),
+            "caption": caption,
+            "style": "cover",
+        })
+
+    return slideshow_images
 
 def build_app() -> None:
     prepare_output()
@@ -180,6 +252,30 @@ def build_app() -> None:
 
     pages = load_content_pages()
 
+    folder_slideshow_images = collect_slideshow_images_from_folder()
+
+    music_page = next(
+        (
+            page
+            for page in pages
+            if page["slug"] == "14_musik_und_fotos"
+        ),
+        None,
+    )
+
+    if music_page is None:
+        raise RuntimeError(
+            "Kapitel 14_musik_und_fotos wurde nicht gefunden."
+        )
+
+    music_page["slideshow_images"] = folder_slideshow_images
+
+    print(
+        "Diashow Kapitel 14:",
+        len(music_page["slideshow_images"]),
+        "Bilder",
+    )
+
     index_html = index_template.render(
         book=pdf_engine.BOOK,
         cover_image=image_path(pdf_engine.COVER_IMAGE),
@@ -193,6 +289,7 @@ def build_app() -> None:
 
     for index, page in enumerate(pages):
         previous_page = pages[index - 1] if index > 0 else None
+
         next_page = (
             pages[index + 1]
             if index < len(pages) - 1
@@ -206,6 +303,24 @@ def build_app() -> None:
             previous_page=previous_page,
             next_page=next_page,
         )
+
+        if page["slug"] == "14_musik_und_fotos":
+            print(
+                "Verwendetes Template:",
+                chapter_template.filename,
+            )
+
+            print(
+                "Dias vor dem Rendern:",
+                len(page["slideshow_images"]),
+            )
+
+            print(
+                "Dias im HTML:",
+                chapter_html.count(
+                    'class="slideshow-slide'
+                ),
+            )
 
         output_path = OUTPUT_DIR / f"{page['slug']}.html"
 

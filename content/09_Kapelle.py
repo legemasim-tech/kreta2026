@@ -1,31 +1,59 @@
-TITLE = "Zur kleinen Kapelle über dem Meer"
+from content_helpers import maps_link
+
+
+TITLE = "Varsamakia – Wanderung zum Turm des Heiligen Demetrius"
 
 IMAGE = "Kreta_Westkueste_01_Turm_Agios_Dimitrios_Varsamakia_Kissamos.jpg"
-
-IMAGE_STYLE = "contain"
 
 PHOTO_STYLE = "single"
 
 EXTRA_IMAGES = [
     {
         "file": "Varsamakia 1.jpg",
-        "caption": "Varsamakia und der Turm des Heiligen Demetrius"
+        "caption": "Varsamakia und der Turm des Heiligen Demetrius",
+        "style": "portrait"
     }
 ]
 
 QUOTE_AFTER_IMAGES = True
 
-TEXT = """
-<h2>Ein kurzer Ausflug mit großer Aussicht</h2>
 
-<p>Nicht jeder Ausflug auf Kreta muss ein ganzer Tag sein. Diese kleine
-Wanderung führt euch zu einer einsam gelegenen Kapelle oberhalb der Küste.
-Der Weg ist nicht besonders lang, belohnt euch aber mit herrlichen Ausblicken
-auf das Meer und die zerklüftete Westküste.</p>
+VILLA_PERICLES = maps_link(
+    "Villa Pericles",
+    "Pericles Beach Villa, Sfinari, Kissamos, Crete, Greece",
+    travelmode="walking",
+)
 
-<p>Gerade am frühen Vormittag liegt hier eine besondere Ruhe. Während unten
-bereits das Leben am Strand beginnt, genießt ihr hier oben nur das Zirpen
-der Zikaden, den Duft der Kräuter und den Blick über das tiefblaue Meer.</p>
+SFINARI = maps_link(
+    "Sfinari",
+    "Sfinari, Kissamos, Crete, Greece",
+    travelmode="walking",
+)
+
+VARSAMAKIA = maps_link(
+    "Varsamakia",
+    "Βαρσαμακια Ιερός ναός Αγίου Δημητρίου, Crete, Greece",
+    travelmode="walking",
+)
+
+TURM_AGIOS_DIMITRIOS = maps_link(
+    "Turm des Heiligen Demetrius",
+    "Βαρσαμακια Ιερός ναός Αγίου Δημητρίου, Crete, Greece",
+    travelmode="walking",
+)
+
+
+TEXT = f"""
+<h2>Ein Vormittag zu Fuß ab der Villa</h2>
+
+<p>Diese Wanderung beginnt direkt bei der {VILLA_PERICLES} und führt euch über
+{SFINARI} hinauf Richtung {VARSAMAKIA}. Sie ist kein kurzer Spaziergang, sondern
+eine richtige kleine Bergwanderung: Der Aufstieg dauert etwa zwei Stunden
+und überwindet knapp 500 Höhenmeter.</p>
+
+<p>Der Lohn dafür sind weite Ausblicke über die Westküste, das Meer und die
+Berge rund um Sfinari. Gerade weil ihr dafür nicht ins Auto steigen müsst,
+ist diese Tour ein besonders schöner Vormittagsausflug direkt vor eurer Haustür.</p>
 
 <div class="info">
 
@@ -33,40 +61,74 @@ der Zikaden, den Duft der Kräuter und den Blick über das tiefblaue Meer.</p>
 
 <ul>
 
-<li><strong>Fahrzeit ab Sfinari:</strong> ca. 10–15 Minuten</li>
+<li>
+<strong>Start:</strong>
+direkt bei der {VILLA_PERICLES}
+</li>
 
-<li><strong>Wanderzeit:</strong> etwa 45–60 Minuten hin und zurück</li>
+<li>
+<strong>Route:</strong>
+Villa – {SFINARI} – {VARSAMAKIA} – zurück auf gleichem Weg
+</li>
 
-<li><strong>Schwierigkeit:</strong> leicht</li>
+<li>
+<strong>Aufstieg:</strong>
+ca. 2 Stunden
+</li>
 
-<li><strong>Parken:</strong> am Beginn des Wanderweges</li>
+<li>
+<strong>Höhenmeter:</strong>
+knapp 500 m
+</li>
 
-<li><strong>Beste Zeit:</strong> vormittags oder gegen Abend</li>
+<li>
+<strong>Rückweg:</strong>
+entsprechend wieder bergab, etwa 1½–2 Stunden
+</li>
+
+<li>
+<strong>Parken:</strong>
+nicht nötig – ihr startet direkt am Haus
+</li>
+
+<li>
+<strong>Mitnehmen:</strong>
+Wasser, feste Schuhe, Kopfbedeckung und Kamera
+</li>
 
 </ul>
 
 </div>
 
+<h2>Der Turm des Heiligen Demetrius</h2>
+
+<p>Bei {VARSAMAKIA}, westlich von Kissamos und nahe Sfinari, befindet sich der
+{TURM_AGIOS_DIMITRIOS}. Er steht nahe dem ehemaligen Kloster Agios
+Dimitrios und vermutlich an der Stelle des alten, heute unbekannten Dorfes
+Monoplatanos.</p>
+
+<p>Um den Turm rankt sich eine Legende: Angeblich soll dort ein verborgener
+Schatz liegen. Manche erzählen, dass italienische Schatzsucher in den
+1960er- oder 1970er-Jahren mit alten Karten danach gesucht haben.
+Ob sie etwas gefunden haben, weiß niemand genau.</p>
+
 <h2>Unterwegs</h2>
 
-<p>Der Weg führt durch typisch kretische Landschaft mit niedrigen
-Sträuchern, wilden Kräutern und alten Olivenbäumen. Immer wieder öffnen
-sich schöne Ausblicke auf die Küste.</p>
+<p>Der Weg führt euch aus dem ruhigen Küstenbereich hinauf in die trockenere,
+steinige Landschaft oberhalb von Sfinari. Je höher ihr kommt, desto weiter
+öffnet sich der Blick auf das Meer und die Westküste.</p>
 
-<p>An der kleinen Kapelle angekommen lohnt es sich, einfach einige Minuten
-zu verweilen und die Ruhe zu genießen.</p>
-
-<h2>Ideal kombinierbar</h2>
+<h2>Zum Abschluss</h2>
 
 <ul>
 
-<li>Mittagessen in einer Taverne in Sfinari</li>
+<li>Früh starten, bevor es zu heiß wird.</li>
 
-<li>Nachmittag am Pool</li>
+<li>Oben genügend Zeit für Aussicht und Fotos einplanen.</li>
 
-<li>Spaziergang am Strand</li>
+<li>Nach der Rückkehr: Pool, Meer oder Mittagessen in {SFINARI}.</li>
 
-<li>Grillabend in der Villa</li>
+<li>Perfekt für einen aktiven Vormittag ohne Autofahrt.</li>
 
 </ul>
 
@@ -74,9 +136,9 @@ zu verweilen und die Ruhe zu genießen.</p>
 
 <h2>Tipp</h2>
 
-<p>Nehmt eine kleine Wasserflasche und eure Kamera mit.
-Die Wanderung ist nicht anstrengend, aber die Aussicht gehört zu den
-schönsten in der Umgebung von Sfinari.</p>
+<p>Diese Wanderung nur machen, wenn ihr wirklich Lust auf Bewegung habt.
+500 Höhenmeter sind bei kretischer Sonne nicht zu unterschätzen. Früh losgehen
+und lieber zu viel Wasser mitnehmen.</p>
 
 </div>
 
@@ -85,20 +147,14 @@ schönsten in der Umgebung von Sfinari.</p>
 <h2>Griechisch des Tages</h2>
 
 <p>
-
-<strong>Εκκλησία</strong><br>
-
-<em>Ekklisía</em><br>
-
-Kapelle / Kirche
-
+<strong>Πύργος</strong><br>
+<em>Pýrgos</em><br>
+Turm
 </p>
 
 </div>
 
 <blockquote>
-
-"Die schönsten Aussichten erreicht man oft auf den kleineren Wegen."
-
+„Manchmal beginnt das Abenteuer nicht auf der Straße, sondern direkt vor der Haustür.“
 </blockquote>
 """

@@ -1,3 +1,5 @@
+from content_helpers import maps_link
+
 TITLE = "Chania – Altstadt, Hafen und venezianisches Flair"
 
 IMAGE = "Kreta_Westkueste_10_Chania_Venezianischer_Hafen.webp"
@@ -25,7 +27,32 @@ EXTRA_IMAGES = [
 
 QUOTE_AFTER_IMAGES = True
 
-TEXT = """
+TALOS_PARKING = maps_link(
+    "Talos Parking",
+    "Talos Parking, Chania, Crete, Greece",
+)
+
+MUNICIPAL_PARKING = maps_link(
+    "Municipal Parking",
+    "Municipal Parking Regina, Kiprou 4, Chania 731 32, Crete, Greece",
+)
+
+TAMAM = maps_link(
+    "Tamam",
+    "Tamam Restaurant Chania, 49 Zampeliou str Old Harbour, Chania 731 00, Crete, Greece",
+)
+
+TO_MARIDAKI = maps_link(
+    "To Maridaki",
+    "To Maridaki, Daskalogianni 33, Chania, Crete, Greece",
+)
+
+PALLAS = maps_link(
+    "Pallas",
+    "Pallas, Venetian Harbour, Chania, Crete, Greece",
+)
+
+TEXT = f"""
 <h2>Der schönste Stadtbesuch Westkretas</h2>
 
 <p>Chania ist wahrscheinlich der stimmungsvollste Stadtbesuch eurer Reise.
@@ -42,8 +69,12 @@ wenn das Licht weicher wird.</p>
 <ul>
 <li><strong>Fahrzeit ab Villa Pericles:</strong> ca. 1 Stunde 15 Minuten</li>
 <li><strong>Zeitbedarf:</strong> 5–7 Stunden</li>
-<li><strong>Empfohlener Parkplatz:</strong> Talos Parking, Partheviou Kelaidi, Chania 73136<br>
-Am westlichen Rand der Altstadt, gut erreichbar ohne durch die engen Gassen zu fahren</li>
+<li>
+    <strong>Parkmöglichkeiten:</strong><br>
+    {TALOS_PARKING} – bewacht, am westlichen Rand der Altstadt, Samstags bis 16 Uhr geöffnet,
+    Sonntags geschlossen<br>
+    {MUNICIPAL_PARKING} – zusätzliche zentrale Parkmöglichkeit
+</li>
 <li><strong>Fußweg:</strong> ca. 5–10 Minuten bis zum venezianischen Hafen</li>
 <li><strong>Beste Zeit:</strong> später Nachmittag bis Abend</li>
 <li><strong>Ideal für:</strong> Altstadt, Hafen, Restaurants, Fotos und Eis</li>
@@ -72,14 +103,26 @@ Am westlichen Rand der Altstadt, gut erreichbar ohne durch die engen Gassen zu f
 
 <ul>
 
-<li><strong>Tamam</strong> Zampeliou 49, mitten in der Altstadt nahe dem venezianischen Hafen.
-<br>
-Sehr beliebt, kretische Küche in historischem Ambiente.</li>
+<li>
+    <strong>{TAMAM}</strong><br>
+    Zampeliou 49, mitten in der Altstadt nahe dem
+    venezianischen Hafen. Sehr beliebt, kretische Küche
+    in historischem Ambiente.
+</li>
 
-<li><strong>To Maridaki</strong> Daskalogianni 33, im Viertel Splantzia, wenige Gehminuten vom Hafen entfernt. Gute Wahl für Fisch, Meeresfrüchte und einfache, ehrliche griechische Küche.</li>
+<li>
+    <strong>{TO_MARIDAKI}</strong><br>
+    Daskalogianni 33 im Viertel Splantzia.
+    Gute Wahl für Fisch, Meeresfrüchte und einfache
+    griechische Küche.
+</li>
 
-<li><strong>Pallas</strong> Direkt am venezianischen Hafen.<br>
-Schön für Drinks, Dessert oder Abendessen mit Blick auf Hafen und Leuchtturm. Besonders stimmungsvoll am Abend.</li>
+<li>
+    <strong>{PALLAS}</strong><br>
+    Direkt am venezianischen Hafen. Schön für Drinks,
+    Dessert oder Abendessen mit Blick auf Hafen und
+    Leuchtturm.
+</li>
 
 </ul>
 

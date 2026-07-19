@@ -1,8 +1,15 @@
+from content_helpers import maps_link
+
+
 TITLE = "Unser Zuhause in Sfinari"
 
 IMAGE = "Villa Perikles (26).avif"
 
+IMAGE_STYLE = "cover"
+
 PHOTO_STYLE = "double"
+
+TOP_IMAGES = []
 
 BOTTOM_IMAGES = [
     {
@@ -17,12 +24,52 @@ BOTTOM_IMAGES = [
 
 QUOTE_AFTER_IMAGES = True
 
-TEXT = """
+
+VILLA_PERICLES = maps_link(
+    "Villa Pericles",
+    "Pericles Beach Villa, Sfinari, Kissamos, Crete, Greece",
+)
+
+SFINARI = maps_link(
+    "Sfinari",
+    "Sfinari, Kissamos, Crete, Greece",
+)
+
+MINI_MARKET = maps_link(
+    "Mini Market",
+    "Grocery store, Sfinari 730 12, Crete, Greece",
+    travelmode="walking",
+)
+
+LIDL_KISSAMOS = maps_link(
+    "Lidl",
+    "Lidl, Kissamos, Crete, Greece",
+)
+
+SYNKA_KISSAMOS = maps_link(
+    "SYN.KA",
+    "SYN.KA Supermarket, Platanos 734 00, Crete, Greece",
+)
+
+CAPTAIN_FIDIAS = maps_link(
+    "Captain Fidias",
+    "Captain Fidias, Sfinari, Kissamos, Crete, Greece",
+    travelmode="walking",
+)
+
+ANTONIOS = maps_link(
+    "Antonios",
+    "Antonios Restaurant, Sfinari, Kissamos, Crete, Greece",
+    travelmode="walking",
+)
+
+
+TEXT = f"""
 <h2>Hier beginnt jeder Urlaubstag</h2>
 
 <p>Es gibt Unterkünfte, in denen man nur schläft. Und es gibt Orte,
 an denen man ankommt und sich sofort zuhause fühlt.
-Die Villa Pericles gehört eindeutig zur zweiten Kategorie.</p>
+Die {VILLA_PERICLES} gehört eindeutig zur zweiten Kategorie.</p>
 
 <p>Nur wenige Schritte trennen euch vom Meer. Morgens wacht ihr mit dem
 Rauschen der Wellen auf, frühstückt auf der Terrasse und blickt hinaus auf
@@ -58,11 +105,11 @@ genau hier – mit Blick aufs Meer – entstanden sein.</p>
 
 <li><strong>Strand:</strong> direkt vor der Villa</li>
 
-<li><strong>Mini Market:</strong> ca. 12 Minuten zu Fuß</li>
+<li><strong>Mini Market:</strong> {MINI_MARKET}, ca. 12 Minuten zu Fuß</li>
 
-<li><strong>Tavernen:</strong> ca. 12 Minuten zu Fuß nach Sfinari</li>
+<li><strong>Tavernen:</strong> ca. 12 Minuten zu Fuß nach {SFINARI}</li>
 
-<li><strong>Große Einkäufe:</strong> Lidl oder SYN.KA in Kissamos</li>
+<li><strong>Große Einkäufe:</strong> {LIDL_KISSAMOS} oder {SYNKA_KISSAMOS} in Kissamos</li>
 
 <li><strong>Parken:</strong> kostenlos an der Villa</li>
 
@@ -88,21 +135,23 @@ genau hier – mit Blick aufs Meer – entstanden sein.</p>
 
 <h2>Sfinari</h2>
 
-<p>Das kleine Fischerdorf gehört zu den ruhigsten Orten an der Westküste
-Kretas. Große Hotels sucht ihr hier vergeblich. Stattdessen erwarten euch
-freundliche Tavernen, ein kleiner Mini Market und eine entspannte Atmosphäre,
-wie man sie auf Kreta nur noch selten findet.</p>
+<p>Das kleine Fischerdorf {SFINARI} gehört zu den ruhigsten Orten an der
+Westküste Kretas. Große Hotels sucht ihr hier vergeblich. Stattdessen erwarten
+euch freundliche Tavernen, ein kleiner Mini Market und eine entspannte
+Atmosphäre, wie man sie auf Kreta nur noch selten findet.</p>
 
 <h2>Unsere Tavernen-Empfehlungen</h2>
 
 <ul>
 
-<li><strong>Captain Fidias</strong><br>
+<li><strong>{CAPTAIN_FIDIAS}</strong><br>
 Direkt an der Bucht von Sfinari, etwa 12 Minuten zu Fuß von der Villa entfernt.<br>
-Frischer Fisch, Meeresfrüchte und traditionelle kretische Küche mit herrlichem Blick aufs Meer.</li>
+Frischer Fisch, Meeresfrüchte und traditionelle kretische Küche mit
+herrlichem Blick aufs Meer.</li>
 
-<li><strong>Antonios</strong><br>
-Im Ortszentrum von Sfinari, ebenfalls etwa 12 Minuten zu Fuß von der Villa entfernt.<br>
+<li><strong>{ANTONIOS}</strong><br>
+Im Ortszentrum von Sfinari, ebenfalls etwa 12 Minuten zu Fuß von der Villa
+entfernt.<br>
 Familiäre Atmosphäre, kretische Küche und regionale Spezialitäten.</li>
 
 </ul>

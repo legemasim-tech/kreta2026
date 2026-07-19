@@ -13,6 +13,7 @@
     <title>{{ page.title }} · {{ book.title }}</title>
 
     <link rel="stylesheet" href="static/app.css">
+    <script src="static/app.js" defer></script>
 </head>
 
 <body>
@@ -105,6 +106,148 @@
                 {% endfor %}
             </div>
         {% endif %}
+
+        {% if page.map_embed_url %}
+            <section class="map-section">
+                <h2>Interaktive Karte</h2>
+
+                <div class="map-frame">
+                    <iframe
+                        src="{{ page.map_embed_url }}"
+                        title="Unsere Kreta-Karte"
+                        loading="lazy"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+
+                {% if page.map_open_url %}
+                    <a
+                        class="map-open-button"
+                        href="{{ page.map_open_url }}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <span>Karte in Google Maps öffnen</span>
+                        <span aria-hidden="true">↗</span>
+                    </a>
+                {% endif %}
+            </section>
+        {% endif %}
+
+        {% if page.spotify_embed_url %}
+    <section class="music-section">
+        <div class="section-heading">
+            <p class="section-eyebrow">Musik aus Kreta</p>
+            <h2>Musik unseres Vermieters</h2>
+        </div>
+
+        <div class="spotify-frame">
+            <iframe
+                src="{{ page.spotify_embed_url }}"
+                title="Musik unseres Vermieters auf Spotify"
+                loading="lazy"
+                allow="
+                    autoplay;
+                    clipboard-write;
+                    encrypted-media;
+                    fullscreen;
+                    picture-in-picture
+                "
+                allowfullscreen
+            ></iframe>
+        </div>
+
+        {% if page.spotify_open_url %}
+            <a
+                class="spotify-open-button"
+                href="{{ page.spotify_open_url }}"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <span>In Spotify öffnen</span>
+                <span aria-hidden="true">↗</span>
+            </a>
+        {% endif %}
+
+        <p class="music-note">
+            Die Wiedergabe lässt sich direkt im Spotify-Player starten,
+            pausieren und wieder abschalten.
+        </p>
+    </section>
+{% endif %}
+
+
+{% if page.slideshow_images %}
+    <section class="slideshow-section">
+        <div class="section-heading">
+            <p class="section-eyebrow">Unsere Reise</p>
+            <h2>Foto-Diashow</h2>
+        </div>
+
+        <div
+            class="slideshow"
+            data-slideshow
+            aria-label="Fotodiashow unserer Kreta-Reise"
+        >
+            <div class="slideshow-stage">
+                {% for photo in page.slideshow_images %}
+                    <figure
+                        class="slideshow-slide{% if loop.first %} is-active{% endif %}"
+                        data-slide
+                        aria-hidden="{% if loop.first %}false{% else %}true{% endif %}"
+                    >
+                        <img
+                            src="{{ photo.src }}"
+                            alt="{{ photo.caption }}"
+                            loading="{% if loop.first %}eager{% else %}lazy{% endif %}"
+                        >
+
+                        {% if photo.caption %}
+                            <figcaption>
+                                {{ photo.caption }}
+                            </figcaption>
+                        {% endif %}
+                    </figure>
+                {% endfor %}
+
+                <div class="slideshow-counter" aria-live="polite">
+                    <span data-current-slide>1</span>
+                    <span aria-hidden="true"> / </span>
+                    <span>{{ page.slideshow_images | length }}</span>
+                </div>
+            </div>
+
+            <div class="slideshow-controls">
+                <button
+                    type="button"
+                    class="slideshow-button"
+                    data-previous-slide
+                    aria-label="Vorheriges Foto"
+                >
+                    ←
+                </button>
+
+                <button
+                    type="button"
+                    class="slideshow-play-button"
+                    data-toggle-slideshow
+                    aria-pressed="false"
+                >
+                    Diashow starten
+                </button>
+
+                <button
+                    type="button"
+                    class="slideshow-button"
+                    data-next-slide
+                    aria-label="Nächstes Foto"
+                >
+                    →
+                </button>
+            </div>
+        </div>
+    </section>
+{% endif %}
 
         {% if page.quote %}
             <div class="chapter-quote">

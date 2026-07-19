@@ -1,8 +1,11 @@
+from content_helpers import maps_link
+
+
 TITLE = "Rethymno – Altstadt, Fortezza und ein kurzer persönlicher Abstecher"
 
 IMAGE = "Rethymno_4.jpg"
 
-PHOTO_STYLE = "grid-large"
+PHOTO_STYLE = "grid-small"
 
 EXTRA_IMAGES = [
     {
@@ -11,7 +14,7 @@ EXTRA_IMAGES = [
     },
     {
         "file": "rethymno 3.webp",
-        "caption": "Rethymno Fortezza"
+        "caption": "Rethymno und die Fortezza"
     },
     {
         "file": "rethymno 4.webp",
@@ -25,10 +28,62 @@ EXTRA_IMAGES = [
 
 QUOTE_AFTER_IMAGES = True
 
-TEXT = """
+
+VILLA_PERICLES = maps_link(
+    "Villa Pericles",
+    "Pericles Beach Villa, Sfinari, Kissamos, Crete, Greece",
+)
+
+RETHYMNO = maps_link(
+    "Rethymno",
+    "Rethymno, Crete, Greece",
+)
+
+FORTEZZA = maps_link(
+    "Fortezza",
+    "Fortezza of Rethymno, Crete, Greece",
+)
+
+FORTEZZA_PARKING = maps_link(
+    "Parkplatz unterhalb der Fortezza",
+    "35.373500,24.472111",
+)
+
+MARINA_PARKING = maps_link(
+    "Marina-Parkplatz",
+    "Rethymno Marina Parking, Rethymno, Crete, Greece",
+)
+
+VENETIAN_HARBOUR = maps_link(
+    "venezianischen Hafen",
+    "Venetian Harbour, Rethymno, Crete, Greece",
+)
+
+FERIENHAUS = maps_link(
+    "Ferienhaus von Michi und Franzi",
+    "35.324306,24.499250",
+)
+
+AVLI = maps_link(
+    "Avli",
+    "Avli Restaurant, Xanthoudidou 22, Rethymno, Crete, Greece",
+)
+
+CASTELO = maps_link(
+    "Castelo",
+    "Castelo Restaurant, Radamanthyos 19, Rethymno, Crete, Greece",
+)
+
+PRIMA_PLORA = maps_link(
+    "Prima Plora",
+    "Prima Plora, Akrotiriou 8, Rethymno, Crete, Greece",
+)
+
+
+TEXT = f"""
 <h2>Warum sich Rethymno lohnt</h2>
 
-<p>Rethymno ist kleiner und ruhiger als Chania, aber mindestens genauso charmant.
+<p>{RETHYMNO} ist kleiner und ruhiger als Chania, aber mindestens genauso charmant.
 Die Stadt verbindet venezianische Häuser, enge Gassen, kleine Geschäfte,
 osmanische Spuren und eine mächtige Festung über dem Meer.</p>
 
@@ -38,56 +93,104 @@ lassen sich hier wunderbar verbinden.</p>
 
 <h2>Die Fortezza</h2>
 
-<p>Die Fortezza thront oberhalb der Altstadt und ist der wichtigste historische
+<p>Die {FORTEZZA} thront oberhalb der Altstadt und ist der wichtigste historische
 Punkt in Rethymno. Von oben habt ihr einen weiten Blick über die Stadt,
-den Hafen und das Meer. Besonders schön ist der Besuch am Vormittag oder
-später am Nachmittag, wenn das Licht weicher wird.</p>
+den Hafen und das Meer.</p>
 
 <div class="info">
 <h2>Praktische Infos</h2>
 <ul>
-<li><strong>Fahrzeit ab Sfinari:</strong> ca. 1 Stunde 40 Minuten</li>
-<li><strong>Zeitbedarf:</strong> 6–8 Stunden inklusive Fortezza, Altstadt und Abstecher</li>
-<li><strong>Parken:</strong> Marina-Parkplatz oder Parkplatz nahe der Fortezza</li>
-<li><strong>Beste Zeit:</strong> Vormittag starten, später Altstadt und Hafen</li>
-<li><strong>Gut kombinierbar mit:</strong> kurzer Halt am Ferienhaus von Gertis Schwester</li>
+
+<li>
+<strong>Fahrzeit ab {VILLA_PERICLES}:</strong>
+ca. 1 Stunde 40 Minuten
+</li>
+
+<li>
+<strong>Zeitbedarf:</strong>
+6–8 Stunden inklusive Fortezza, Altstadt und Abstecher
+</li>
+
+<li>
+<strong>Empfohlener Parkplatz:</strong>
+{FORTEZZA_PARKING} / E. Kefalogianni Straße
+</li>
+
+<li>
+<strong>Alternative:</strong>
+{MARINA_PARKING} oder kostenpflichtiger Parkplatz nahe dem
+{VENETIAN_HARBOUR}
+</li>
+
+<li>
+<strong>Wichtig:</strong>
+Nicht in die Altstadt hineinfahren – viele Gassen sind eng oder Fußgängerzone.
+</li>
+
+<li>
+<strong>Beste Zeit:</strong>
+Vormittag starten, später Altstadt und Hafen
+</li>
+
 </ul>
 </div>
 
-<h2>Kurzer Abstecher zum Ferienhaus</h2>
+<h2>Kurzer Abstecher zu Michi´s & Franzi´s Ferienhaus</h2>
 
-<p>Auf dem Weg nach oder von Rethymno bietet sich ein kurzer Halt beim Ferienhaus
-von Gertis Schwester an. Niemand muss dort sein – es reicht, das Haus von außen
-anzuschauen, ein Foto zu machen und die Umgebung kurz auf sich wirken zu lassen.</p>
+<p>Auf dem Weg nach oder von Rethymno bietet sich ein kurzer Halt beim
+{FERIENHAUS} an. Niemand muss dort sein – es reicht, das Haus von außen
+anzuschauen und die Umgebung kurz auf sich wirken zu lassen.</p>
 
-<p><strong>Koordinaten:</strong><br>
-35°19'27.5&quot;N   24°29'57.3&quot;E</p>
+<p>
+<strong>Koordinaten:</strong>
+35°19'27.5&quot;N · 24°29'57.3&quot;E
+</p>
 
 <h2>Rundgang durch Rethymno</h2>
 
 <ul>
-<li>Fortezza besuchen und Ausblick genießen</li>
-<li>durch die Altstadtgassen schlendern</li>
-<li>venezianischen Hafen ansehen</li>
-<li>kleine Läden und Cafés entdecken</li>
-<li>zum Abschluss entspannt essen gehen</li>
+<li>{FORTEZZA} besuchen und Ausblick genießen.</li>
+<li>Durch die Altstadtgassen schlendern.</li>
+<li>Den {VENETIAN_HARBOUR} ansehen.</li>
+<li>Kleine Läden und Cafés entdecken.</li>
+<li>Zum Abschluss entspannt essen gehen.</li>
 </ul>
 
 <h2>Tavernen & Essen</h2>
 
 <ul>
-<li><strong>Avli:</strong> schöne Atmosphäre, kretische Küche, etwas besonderer.</li>
-<li><strong>Castelo:</strong> gemütlich in der Altstadt, gute Wahl für ein entspanntes Essen.</li>
-<li><strong>Prima Plora:</strong> direkt am Meer, besonders schön für Fisch und mediterrane Küche.</li>
+
+<li>
+<strong>{AVLI}</strong><br>
+Xanthoudidou 22, mitten in der Altstadt von Rethymno.<br>
+Eines der bekanntesten Restaurants der Stadt. Wunderschöner Innenhof,
+gehobene kretische Küche und besondere Atmosphäre.
+Reservierung empfehlenswert.
+</li>
+
+<li>
+<strong>{CASTELO}</strong><br>
+Radamanthyos 19, in einer ruhigen Gasse der Altstadt.<br>
+Gemütliches Restaurant mit mediterraner und kretischer Küche.
+Ideal für ein entspanntes Abendessen nach dem Stadtbummel.
+</li>
+
+<li>
+<strong>{PRIMA_PLORA}</strong><br>
+Akrotiriou 8, direkt am Meer westlich der Altstadt.<br>
+Wunderschöne Terrasse mit Blick aufs Wasser. Besonders bekannt für
+frischen Fisch, Meeresfrüchte und mediterrane Küche.
+</li>
+
 </ul>
 
 <div class="tip">
 <h2>Tipp</h2>
-<p>Beginnt bei der Fortezza und lasst euch anschließend durch die Altstadt treiben.</p>
+<p>Beginnt bei der {FORTEZZA} und lasst euch anschließend durch die Altstadt treiben.</p>
 </div>
 
 <div class="greek">
-<h2>Griechisch</h2>
+<h2>Griechisch des Tages</h2>
 <p><strong>Κάστρο</strong><br>
 <em>Kástro</em><br>
 Festung / Burg</p>

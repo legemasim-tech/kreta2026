@@ -1,3 +1,6 @@
+from content_helpers import maps_link
+
+
 TITLE = "Kissamos – Das Tor zum Westen Kretas"
 
 IMAGE = "Kissamos_Kreta_Griechenland.webp"
@@ -21,17 +24,64 @@ BOTTOM_IMAGES = [
 
 QUOTE_AFTER_IMAGES = True
 
-TEXT = """
+
+VILLA_PERICLES = maps_link(
+    "Villa Pericles",
+    "Pericles Beach Villa, Sfinari, Kissamos, Crete, Greece",
+)
+
+KISSAMOS = maps_link(
+    "Kissamos",
+    "Kissamos, Crete, Greece",
+)
+
+SYNKA_KISSAMOS = maps_link(
+    "SYN.KA Supermarkt",
+    "SYN.KA Supermarket, Kissamos, Crete, Greece",
+)
+
+LIDL_KISSAMOS = maps_link(
+    "Lidl Kissamos",
+    "Lidl, Kissamos, Crete, Greece",
+)
+
+MAVROS_MOLOS = maps_link(
+    "Mavros Molos",
+    "Paralia Mavros Μolos, Kissamos 734 00, Crete, Greece",
+)
+
+KISSAMOS_PORT = maps_link(
+    "Hafen von Kissamos",
+    "Port of Kissamos, Kavonisi, Crete, Greece",
+)
+
+THE_CELLAR = maps_link(
+    "The Cellar",
+    "The Cellar Tavern, Kissamos, Crete, Greece",
+)
+
+PIXIDA = maps_link(
+    "Pixida Restaurant",
+    "Pixida Restaurant, Kissamos, Crete, Greece",
+)
+
+MARIA_BEACH = maps_link(
+    "Maria Beach Restaurant",
+    "Maria Beach Restaurant, Kissamos, Crete, Greece",
+)
+
+
+TEXT = f"""
 <h2>Die wichtigste Stadt eurer Reise</h2>
 
-<p>Kissamos ist keine klassische Sehenswürdigkeit, sondern die kleine Stadt,
+<p>{KISSAMOS} ist keine klassische Sehenswürdigkeit, sondern die kleine Stadt,
 die ihr während eures Urlaubs vermutlich am häufigsten besuchen werdet.
 Hier erledigt ihr eure Einkäufe, startet zu einigen Ausflügen und findet
-zahlreiche Tavernen, Cafés und den Hafen.</p>
+zahlreiche Tavernen, Cafés und den {KISSAMOS_PORT}.</p>
 
 <p>Im Vergleich zu Chania geht es hier deutlich ruhiger zu. Gerade deshalb
 lohnt es sich, nicht nur zum Einkaufen hierherzukommen, sondern auch einmal
-durch die Straßen zu bummeln oder am Strand von Mavros Molos einen Kaffee
+durch die Straßen zu bummeln oder am Strand von {MAVROS_MOLOS} einen Kaffee
 zu genießen.</p>
 
 <div class="info">
@@ -40,11 +90,21 @@ zu genießen.</p>
 
 <ul>
 
-<li><strong>Fahrzeit ab Villa Pericles:</strong> ca. 20 Minuten bis Kissamos</li>
+<li>
+<strong>Fahrzeit ab {VILLA_PERICLES}:</strong>
+ca. 20 Minuten bis Kissamos
+</li>
 
-<li><strong>SYN.KA Supermarkt:</strong> ca. 30 Minuten Fahrzeit, große Auswahl an Lebensmitteln und regionalen Produkten.</li>
+<li>
+<strong>{SYNKA_KISSAMOS}:</strong>
+ca. 30 Minuten Fahrzeit, große Auswahl an Lebensmitteln
+und regionalen Produkten.
+</li>
 
-<li><strong>Lidl Kissamos:</strong> ca. 55 Minuten Fahrzeit, ideal für den ersten Großeinkauf.</li>
+<li>
+<strong>{LIDL_KISSAMOS}:</strong>
+ca. 55 Minuten Fahrzeit, ideal für den ersten Großeinkauf.
+</li>
 
 <li><strong>Tankstellen:</strong> mehrere an der Ortseinfahrt.</li>
 
@@ -66,7 +126,7 @@ zu genießen.</p>
 
 <li>Frischen Fisch oder regionale Spezialitäten einkaufen.</li>
 
-<li>Am Hafen oder am Strand von Mavros Molos spazieren gehen.</li>
+<li>Am {KISSAMOS_PORT} oder am Strand von {MAVROS_MOLOS} spazieren gehen.</li>
 
 <li>Gemütlich einen Kaffee trinken oder ein Eis genießen.</li>
 
@@ -76,21 +136,27 @@ zu genießen.</p>
 
 <ul>
 
-<li><strong>The Cellar</strong><br>
+<li>
+<strong>{THE_CELLAR}</strong><br>
 Direkt an der Uferpromenade von Kissamos.<br>
 Gemütliche Atmosphäre mit schöner Terrasse und Blick aufs Meer.
 Bekannt für traditionelle kretische Küche, frischen Fisch und
-hervorragende Fleischgerichte.</li>
+hervorragende Fleischgerichte.
+</li>
 
-<li><strong>Pixida Restaurant</strong><br>
+<li>
+<strong>{PIXIDA}</strong><br>
 Nahe dem Hafen von Kissamos.<br>
 Eine der besten Adressen für Fisch und Meeresfrüchte.
-Modernes Ambiente mit mediterraner Küche und freundlichem Service.</li>
+Modernes Ambiente mit mediterraner Küche und freundlichem Service.
+</li>
 
-<li><strong>Maria Beach Restaurant</strong><br>
+<li>
+<strong>{MARIA_BEACH}</strong><br>
 Direkt am Strand von Mavros Molos.<br>
 Ideal für ein entspanntes Mittag- oder Abendessen mit Blick aufs Meer.
-Besonders beliebt sind Fischgerichte, Salate und kretische Spezialitäten.</li>
+Besonders beliebt sind Fischgerichte, Salate und kretische Spezialitäten.
+</li>
 
 </ul>
 
@@ -99,7 +165,7 @@ Besonders beliebt sind Fischgerichte, Salate und kretische Spezialitäten.</li>
 <h2>Tipp</h2>
 
 <p>Verbindet den Einkauf gleich mit einem Spaziergang am Strand von
-Mavros Molos oder einem Essen am Meer. So wird aus einer
+{MAVROS_MOLOS} oder einem Essen am Meer. So wird aus einer
 Besorgungsfahrt ein kleiner Urlaubsausflug.</p>
 
 </div>

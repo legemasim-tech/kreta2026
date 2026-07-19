@@ -470,3 +470,339 @@ blockquote {
         text-align: left;
     }
 }
+.map-section {
+    padding: 8px 20px 34px;
+}
+
+.map-section h2 {
+    margin: 0 0 16px;
+    font-family: Georgia, serif;
+    font-size: 27px;
+}
+
+.map-frame {
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: #e5e1d8;
+    border-radius: 16px;
+    box-shadow: 0 8px 26px rgba(40, 45, 40, 0.1);
+}
+
+.map-frame iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.map-open-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+    padding: 15px 17px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    background: #476d67;
+    border-radius: 13px;
+}
+
+@media (min-width: 700px) {
+    .map-section {
+        padding-right: 42px;
+        padding-left: 42px;
+    }
+
+    .map-frame {
+        aspect-ratio: 16 / 10;
+    }
+}
+.maps-link {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 4px;
+    color: #356a63;
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+}
+
+.maps-link-icon {
+    font-family: sans-serif;
+    font-size: 0.78em;
+    text-decoration: none;
+}
+
+.maps-link:active {
+    opacity: 0.65;
+}
+.villa-website-link {
+    margin-top: -4px;
+    margin-bottom: 26px;
+}
+
+.website-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 11px 14px;
+    color: #356a63;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-decoration: none;
+    background: rgba(71, 109, 103, 0.1);
+    border: 1px solid rgba(71, 109, 103, 0.22);
+    border-radius: 11px;
+}
+
+.website-link:active {
+    opacity: 0.65;
+}
+.greek-table {
+    width: 100%;
+    margin: 22px 0 30px;
+    overflow: hidden;
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    font-size: 15px;
+    line-height: 1.4;
+    border-collapse: separate;
+    border-spacing: 0;
+    background: white;
+    border: 1px solid rgba(71, 109, 103, 0.2);
+    border-radius: 13px;
+}
+
+.greek-table th,
+.greek-table td {
+    padding: 12px 14px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.greek-table th {
+    color: white;
+    font-size: 13px;
+    letter-spacing: 0.03em;
+    background: #476d67;
+}
+
+.greek-table td {
+    border-bottom: 1px solid rgba(71, 109, 103, 0.13);
+}
+
+.greek-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.greek-table tbody tr:nth-child(even) {
+    background: rgba(71, 109, 103, 0.06);
+}
+
+.greek-table td:first-child {
+    color: #263a36;
+    font-family: Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+}
+
+@media (max-width: 430px) {
+    .greek-table {
+        font-size: 13px;
+    }
+
+    .greek-table th,
+    .greek-table td {
+        padding: 10px 8px;
+    }
+
+    .greek-table td:first-child {
+        font-size: 15px;
+    }
+}
+.music-section,
+.slideshow-section {
+    padding: 12px 20px 38px;
+}
+
+.section-heading {
+    margin-bottom: 17px;
+}
+
+.section-heading h2 {
+    margin: 4px 0 0;
+    font-family: Georgia, serif;
+    font-size: 28px;
+    line-height: 1.2;
+}
+
+.section-eyebrow {
+    margin: 0;
+    color: #6b807b;
+    font-size: 11px;
+    font-weight: 750;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.spotify-frame {
+    overflow: hidden;
+    width: 100%;
+    min-height: 352px;
+    background: #222;
+    border-radius: 16px;
+    box-shadow: 0 8px 26px rgba(40, 45, 40, 0.12);
+}
+
+.spotify-frame iframe {
+    display: block;
+    width: 100%;
+    height: 352px;
+    border: 0;
+}
+
+.spotify-open-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+    padding: 15px 17px;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    background: #476d67;
+    border-radius: 13px;
+}
+
+.music-note {
+    margin: 13px 2px 0;
+    color: #6c7069;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.slideshow {
+    width: 100%;
+}
+
+.slideshow-stage {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    background: #dedad1;
+    border-radius: 17px;
+    box-shadow: 0 8px 28px rgba(40, 45, 40, 0.13);
+}
+
+.slideshow-slide {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition:
+        opacity 700ms ease,
+        visibility 700ms ease;
+}
+
+.slideshow-slide.is-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.slideshow-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slideshow-slide figcaption {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 45px 16px 15px;
+    color: white;
+    font-size: 14px;
+    line-height: 1.4;
+    background:
+        linear-gradient(
+            to bottom,
+            transparent,
+            rgba(20, 25, 23, 0.82)
+        );
+}
+
+.slideshow-counter {
+    position: absolute;
+    z-index: 3;
+    top: 13px;
+    right: 13px;
+    padding: 6px 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    background: rgba(25, 30, 28, 0.65);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+}
+
+.slideshow-controls {
+    display: grid;
+    grid-template-columns: 48px 1fr 48px;
+    gap: 10px;
+    margin-top: 13px;
+}
+
+.slideshow-button,
+.slideshow-play-button {
+    min-height: 48px;
+    padding: 10px;
+    color: #355b57;
+    font: inherit;
+    font-weight: 750;
+    cursor: pointer;
+    background: white;
+    border: 1px solid rgba(71, 109, 103, 0.2);
+    border-radius: 12px;
+}
+
+.slideshow-button {
+    font-size: 21px;
+}
+
+.slideshow-button:active,
+.slideshow-play-button:active {
+    transform: translateY(1px);
+    opacity: 0.7;
+}
+
+@media (min-width: 700px) {
+    .music-section,
+    .slideshow-section {
+        padding-right: 42px;
+        padding-left: 42px;
+    }
+
+    .slideshow-stage {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .slideshow-slide {
+        transition: none;
+    }
+}
